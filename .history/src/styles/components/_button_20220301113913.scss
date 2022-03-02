@@ -1,0 +1,17 @@
+.btn__contact {
+  width: 100%;
+  padding: 20px 80px 20px 60px;
+  border-radius: 4px;
+  margin: 2rem 0;
+  color: $clr-neon;
+  border: 4px solid currentColor;
+  background-color: unset;
+  @include flex(center, space-between);
+  i {
+    width: 50px;
+  }
+  span {
+    flex: 1;
+    text-align: left;
+  }
+}

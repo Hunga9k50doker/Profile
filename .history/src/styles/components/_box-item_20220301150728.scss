@@ -1,0 +1,15 @@
+.box {
+  background: rgb(167, 125, 125);
+  width: 600px;
+  height: 600px;
+  margin: 5rem 2rem 0 2rem;
+  @include flex(center, center);
+  flex-direction: column;
+  &__header {
+    flex: 3;
+  }
+  &__body {
+    flex: 1;
+    @include flex(center, space-around);
+  }
+}

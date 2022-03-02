@@ -1,0 +1,16 @@
+@use "../../styles/base" as *;
+
+.component {
+  width: 100%;
+  background-color: $second-color;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  color: $white-color;
+
+  .main{
+    position: relative;
+    top: 0;
+    left: 0;
+    
+  }
+}

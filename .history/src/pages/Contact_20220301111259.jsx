@@ -1,0 +1,13 @@
+import React from 'react'
+import Button from '../components/common/button'
+
+export default function Contact() {
+  const arrContact = ['Facebook','Github', 'LinkedIn', '']
+  return (
+    <div className="contact">
+    <ul className="contact__list">
+
+    </ul>
+    </div>
+  )
+}

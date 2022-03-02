@@ -1,0 +1,14 @@
+.btn__contact {
+  width: 100%;
+  padding: 20px 80px;
+  border-radius: 4px;
+  margin: 10px 0;
+  @include flex(center, space-between);
+  i {
+    width: 50px;
+  }
+  span {
+    flex: 1;
+    text-align: left;
+  }
+}

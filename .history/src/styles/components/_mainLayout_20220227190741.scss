@@ -1,0 +1,17 @@
+@use "../../styles/base" as *;
+
+.component {
+  width: 100%;
+  background-color: $second-color;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  color: $white-color;
+
+  .main {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in-out;
+  }
+}

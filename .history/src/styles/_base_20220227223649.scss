@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  // background: $black-color;
+  // color: $white-color;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+input {
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.btn {
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  &:hover {
+    background: rgb(19, 133, 133);
+    color: #fff;
+  }
+}
