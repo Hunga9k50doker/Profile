@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../components/common/Button";
 
 export default function Contact() {
-  document.title = "NH-Contact";
-
   const arrContact = [
     {
       icon: "bx bxl-facebook",

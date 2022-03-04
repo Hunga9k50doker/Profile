@@ -2,7 +2,6 @@ import React from "react";
 
 import { avatar } from "../assets/img";
 export default function Home() {
-  document.title='NH-Home'
   return (
     <div className="home">
       <div className="grid wide">

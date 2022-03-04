@@ -3,8 +3,6 @@ import BoxItem from "../components/common/BoxItem";
 import arrProj from "../assets/data/Project";
 
 export default function Project() {
-  document.title = "NH-Product";
-
   const [index, setindex] = useState(0);
   useEffect(() => setindex[0], []);
   const next = () => {
