@@ -1,5 +1,39 @@
 .project {
+  overflow: hidden;
   &__list {
+    flex: 1;
+    position: relative;
+    width: 100%;
     @include flex(center, space-around);
+    padding: 0 50px;
+  }
+  &__item {
+    opacity: 0;
+    transform: scale(1);
+    transition-duration: 1s;
+  }
+  &__item.active {
+    opacity: 1;
+    transform: scale(1.08);
+    transition-duration: 1s;
+  }
+  .thumb {
+    @include flex(center, center);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      margin: 5px;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    img.active {
+      border: 1px solid $primary-color;
+    }
   }
 }

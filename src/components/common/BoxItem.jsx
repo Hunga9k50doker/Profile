@@ -1,10 +1,25 @@
 import React, { useState } from "react";
 import Button from "./Button";
-
+const ThumbImg = ({ arr, setImg, index }) => {
+  const [thumb, setThumb] = useState(0);
+  return (
+    <div className="thumb">
+      {arr.map((e, id) => (
+        <img
+          key={id}
+          src={e}
+          alt="Not found"
+          className={index === id ? "active" : ""}
+          onClick={() => setImg(id)}
+        />
+      ))}
+    </div>
+  );
+};
 export default function BoxItem(props) {
   const [active, setActive] = useState(false);
   return (
-    <div className="box">
+    <div className={`box ${props.className}`}>
       <div className={`box__overlay   ${active ? "active" : ""}`}>
         <h3 className="box__overlay__desc">
           Description:
@@ -21,9 +36,12 @@ export default function BoxItem(props) {
           <Button content="Close" classNameBtn="btn__close" />
         </div>
       </div>
-      <div className="box__header">
+      <div className="box__header">{
+        props.idThumb
+      }
         <img src={props.img} alt={props.title} />
       </div>
+      <ThumbImg arr={props.thumb} setImg={props.thumb[0]} index={0} />
       <div className="box__body">
         <div onClick={() => setActive(true)} className="box__body__moreDesc">
           <Button classNameBtn="btn__primary" content="Read more"></Button>

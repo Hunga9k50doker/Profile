@@ -10,6 +10,17 @@
   overflow: hidden;
   &__header {
     flex: 3;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 0 0.35rem rgba($black-color, 0.15);
+    img {
+      background-size: 100% 100%;
+      background: center center no-repeat;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
   }
   &__body {
     width: 100%;
@@ -25,8 +36,9 @@
     width: 100%;
     min-height: 50%;
     box-shadow: 0 0 0.35rem rgba($black-color, 0.3);
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease;
     transform: translateY(-200%);
+    z-index: 15;
     opacity: 0;
     @include flex(flex-start, space-around);
     flex-direction: column;

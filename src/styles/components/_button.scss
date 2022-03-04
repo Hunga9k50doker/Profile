@@ -9,6 +9,30 @@
     color: $white-color;
   }
 }
+.btn__prev,
+.btn__next {
+  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  padding: unset;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  &:hover {
+    color: $primary-color;
+    opacity: 1;
+  }
+}
+.btn__next {
+  right: 0;
+}
+.btn__prev {
+  left: 0;
+}
+
 .btn__contact {
   position: relative;
   font-size: 2rem;
