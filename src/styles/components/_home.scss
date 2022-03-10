@@ -6,9 +6,11 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    transform: translate(50px, -50px);
+
+    transform: translate(50px, -20px);
     padding: 4px;
     overflow: hidden;
+
     &:after {
       content: " ";
       position: absolute;
@@ -36,6 +38,11 @@
       height: 100%;
       border-radius: 50%;
     }
+  }
+  &__desc,
+  &__title {
+    line-height: 1.2rem;
+    margin: 1rem 2rem;
   }
 }
 

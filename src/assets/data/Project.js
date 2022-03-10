@@ -1,7 +1,3 @@
-// const img_01 = require("../images/dici_banner_1_opt.jpg").default;
-// const img_02 = require("../images/black_head.jpg").default;
-// const img_03 = require("../images/black_ban1.jpg").default;
-// const img_04 = require("../images/black_band4.jpg").default;
 import {
   project_1_img_01,
   project_1_img_02,

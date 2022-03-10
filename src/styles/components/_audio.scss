@@ -1,0 +1,156 @@
+.audio {
+  position: relative;
+  @include flex(center, center);
+  min-width: 300px;
+  &__title {
+    position: absolute;
+    margin: 10px 0;
+    top: 100%;
+    left: 50%;
+    min-width: 150px;
+    transform: scaleY(0) translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    transform-origin: center top;
+    font-size: 1rem;
+    background: #31383e;
+  }
+  &__repeat {
+    position: absolute;
+    right: -20%;
+    font-size: 1.6rem;
+    background: unset;
+    color: $white-color;
+    cursor: pointer;
+    border: none;
+  }
+  &__repeat.active {
+    color: $primary-color;
+  }
+  &__volume.active {
+    .volume__mute {
+      display: none;
+    }
+  }
+  &__volume:not(.active) {
+    .volume__active {
+      display: none;
+    }
+  }
+
+  &__volume {
+    cursor: pointer;
+    position: absolute;
+    right: -100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    @include flex(center, center);
+
+    input {
+      height: 4px;
+      cursor: pointer;
+      margin-left: 4px;
+      padding: 0;
+    }
+  }
+  &__progress {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 5rem;
+    height: 2px;
+    padding: 0;
+  }
+  audio {
+    border-radius: none;
+    color: $white-color;
+    background: $black-color;
+  }
+  .btn {
+    width: 36px;
+    height: 36px;
+    color: $third-color;
+  }
+  &__box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: $white-color;
+    @include flex(center, center);
+    border-radius: 50%;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      left: -5px;
+      bottom: -5px;
+      right: -5px;
+      top: -5px;
+      border-radius: 50%;
+      -webkit-animation: audio 1s infinite;
+      animation: audio 1s infinite;
+      z-index: 3;
+      background-image: linear-gradient(
+        109.6deg,
+        rgba(247, 253, 166, 1) 11.2%,
+        rgba(128, 255, 221, 1) 57.8%,
+        rgba(255, 128, 249, 1) 85.9%
+      );
+    }
+    .btn__audio {
+      position: relative;
+      z-index: 5;
+
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      @include flex(center, center);
+      background: $second-color;
+    }
+    i {
+      font-size: 1.6rem;
+    }
+    &:hover {
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+  &__info {
+    position: absolute;
+    left: -50%;
+    bottom: 0;
+    background: unset;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    color: $white-color;
+    border: none;
+    &:hover {
+      color: $primary-color;
+      .audio__title {
+        font-size: 1rem;
+        transform: scaleY(1) translateX(-50%);
+      }
+    }
+  }
+}
+
+@-webkit-keyframes audio {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes audio {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
