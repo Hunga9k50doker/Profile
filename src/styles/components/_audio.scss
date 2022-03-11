@@ -13,30 +13,36 @@
     transform-origin: center top;
     font-size: 1rem;
     background: #31383e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   &__repeat {
     position: absolute;
-    right: -20%;
+    right: -30%;
     font-size: 1.6rem;
     background: unset;
     color: $white-color;
     cursor: pointer;
     border: none;
+    &:hover {
+      color: $primary-color;
+    }
   }
   &__repeat.active {
-    color: $primary-color;
+    color: $clr-neon;
   }
-  &__volume.active {
+  .volume__icon.active {
     .volume__mute {
       display: none;
     }
   }
-  &__volume:not(.active) {
+  .volume__icon:not(.active) {
     .volume__active {
       display: none;
     }
   }
-
+  .volume__icon {
+    @include flex(center, center);
+  }
   &__volume {
     cursor: pointer;
     position: absolute;
@@ -50,6 +56,7 @@
       cursor: pointer;
       margin-left: 4px;
       padding: 0;
+      overflow: hidden;
     }
   }
   &__progress {
@@ -60,6 +67,8 @@
     top: 5rem;
     height: 2px;
     padding: 0;
+    transition: opacity 0.2s;
+    overflow: hidden;
   }
   audio {
     border-radius: none;
@@ -69,7 +78,13 @@
   .btn {
     width: 36px;
     height: 36px;
-    color: $third-color;
+    color: $clr-bg;
+    background: $black-color;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    &:hover {
+      color: $primary-color;
+    }
   }
   &__box {
     position: relative;
@@ -100,7 +115,6 @@
     .btn__audio {
       position: relative;
       z-index: 5;
-
       width: 40px;
       height: 40px;
       border-radius: 50%;

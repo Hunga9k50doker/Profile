@@ -10,8 +10,8 @@ html,
 body {
   height: 100%;
   font-family: "Roboto", sans-serif;
-  // background: $black-color;
-  // color: $white-color;
+  background: $black-color;
+  color: $white-color;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -39,4 +39,32 @@ input {
   outline: none;
   border-radius: 4px;
 }
+input[type="range"]:focus {
+  outline: none;
+}
 
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  // background: $white-color;
+  height: 0.5rem;
+}
+// /******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  // background: $white-color;
+  height: 0.5rem;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: 1rem;
+}
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; 
+  border-radius: 0; 
+  height: 4px;
+  width: 1rem;
+}

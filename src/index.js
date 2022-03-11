@@ -4,7 +4,6 @@ import App from "./App";
 
 import "boxicons/css/boxicons.min.css";
 import "./styles/index.scss";
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

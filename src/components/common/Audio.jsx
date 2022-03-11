@@ -6,26 +6,40 @@ const Audio = () => {
   const [active, setActive] = useState(false);
   const [repeat, setRepeat] = useState(false);
   const [volume, setVolume] = useState(50);
-  const [progress, setProgress] = useState(0);
   const [mute, setMute] = useState(false);
   const refAudio = useRef(null);
   const btnNext = useRef(null);
   const refRepeat = useRef(null);
-  const refVolume = useRef(null);
   const refVolumeIcon = useRef(null);
-
+  const refProgress = useRef(null);
   useEffect(() => {
     setAudio(5);
     setActive();
-    console.log(refAudio.current.ended);
   }, []);
   useEffect(() => {
-    // handleEvent.setVolume();
-    // handleEvent.setRepeat();
     handleEvent.toggleAudio();
     handleEvent.setVolume();
+    handleEvent.setMute();
+    handleEvent.setRepeat();
   });
-
+  useEffect(() => {
+    refAudio.current.onended = () => {
+      next();
+    };
+  });
+  useEffect(() => {
+    refAudio.current.ontimeupdate = () => {
+      if (refAudio.current) {
+        const progressPercent = Math.floor(
+          (refAudio.current.currentTime / refAudio.current.duration) * 100
+        );
+        refProgress.current.value = progressPercent;
+      }
+    };
+  });
+  useEffect(() => {
+    handleEvent.setSeekTime();
+  });
   const next = () => {
     audio === arrAudio.length - 1 ? setAudio(0) : setAudio(audio + 1);
     setActive(true);
@@ -34,29 +48,29 @@ const Audio = () => {
     audio === 0 ? setAudio(arrAudio.length - 1) : setAudio(audio - 1);
     setActive(true);
   };
+
   const handleEvent = {
     toggleAudio() {
       active ? refAudio.current.play() : refAudio.current.pause();
     },
     setRepeat() {
-      repeat ? setAudio(audio) : setAudio(audio + 1);
-      refAudio.current.play();
+      refAudio.current.loop = repeat;
     },
     setVolume() {
-      if (volume === 0) {
-        // refVolume.current.classList.toggle("active");
-        setMute(true);
-      } else {
-        setMute(false);
-
-        return (refAudio.current.volume = volume / 100);
-      }
+      refAudio.current.volume = volume / 100;
     },
-    start: function () {
-      handleEvent.setRepeat();
+    setMute() {
+      refAudio.current.muted = mute;
+    },
+    setSeekTime() {
+      refProgress.current.onchange = (e) => {
+        const seekTime = (refAudio.current.duration / 100) * e.target.value;
+        refAudio.current.currentTime = seekTime;
+        console.log(seekTime);
+      };
     },
   };
-  // handleEvent.start();
+
   return (
     <div className="audio">
       {arrAudio.map(
@@ -65,9 +79,7 @@ const Audio = () => {
             <React.Fragment key={id}>
               <audio
                 ref={refAudio}
-                // autoPlay={true}
                 src={e.audio}
-                // controls
                 volume="100"
                 type="audi0/mp3"
               ></audio>
@@ -83,15 +95,11 @@ const Audio = () => {
                   )}
                 </button>
               </div>
-              <div
-                ref={refVolume}
-                className={`audio__volume ${refVolume ? "active" : ""}`}
-                // onClick={() => refVolume.current.classList.toggle("active")}
-              >
+              <div className={`audio__volume`}>
                 <div
                   ref={refVolumeIcon}
                   className={`volume__icon ${mute ? "" : "active"}`}
-                  onClick={() => handleEvent.setVolume()}
+                  onClick={() => setMute(!mute)}
                 >
                   <i className="bx bx-volume-mute volume__mute"></i>
                   <i className="bx bx-volume-full volume__active"></i>
@@ -113,15 +121,19 @@ const Audio = () => {
                 <i className="bx bx-repost"></i>
               </button>
               <input
+                ref={refProgress}
                 className="audio__progress"
                 type="range"
                 min={0}
                 step="1"
                 max="100"
+                defaultValue={0}
               ></input>
               <button className="audio__info">
                 <i className="bx bx-info-circle"></i>
-                <h3 className="audio__title">{e.title}</h3>
+                <h3 className="audio__title">
+                  <i className="bx bx-music"></i>: {e.title}.
+                </h3>
               </button>
               <button className="btn btn__next" onClick={next} ref={btnNext}>
                 <i className="bx bx-skip-next"></i>
