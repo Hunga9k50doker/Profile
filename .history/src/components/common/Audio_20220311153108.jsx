@@ -63,7 +63,7 @@ const Audio = () => {
       refAudio.current.muted = mute;
     },
     setSeekTime() {
-      refProgress.current.oninput = (e) => {
+      refProgress.current.onchange = (e) => {
         const seekTime = (refAudio.current.duration / 100) * e.target.value;
         refAudio.current.currentTime = seekTime;
         console.log(seekTime);
