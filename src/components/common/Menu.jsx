@@ -4,6 +4,7 @@ export default function Menu({ active, setActive }) {
   const location = useLocation();
   React.useEffect(() => {
     setActive(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
   return (
     <div className={`menu ${active ? "active" : ""}`}>

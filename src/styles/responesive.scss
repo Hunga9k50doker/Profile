@@ -36,3 +36,101 @@ input[type="range"]::-ms-fill-lower {
 input[type="range"]::-ms-fill-upper {
   background-color: $white-color;
 }
+
+@media (max-width: 1200px) {
+  .audio {
+    min-width: 180px;
+    &__info {
+      left: -60px;
+      font-size: 1.6rem;
+      height: 100%;
+    }
+    &__volume {
+      width: 100px;
+    }
+  }
+  .component.active .menu {
+    transform: translateX(-2rem);
+    z-index: 99;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__logo,
+    &__menu {
+      font-size: 1.6rem;
+    }
+  }
+  .home {
+    &__avatar {
+      transform: translate(50px, 20px);
+    }
+  }
+  .audio {
+    .btn {
+      font-size: 1rem;
+      width: 32px;
+      height: 32px;
+    }
+    &__box {
+      width: 40px;
+      height: 40px;
+    }
+    &__repeat,
+    &__info {
+      font-size: 1.4rem;
+    }
+    &__volume {
+      width: 80px;
+      right: -80%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .component.active .menu {
+    top: 5rem;
+    background: #31383e;
+    width: 50vw;
+    transform: translateX(-0);
+  }
+  .home {
+    &__avatar {
+      margin: 4rem 0;
+      transform: translate(50%, 20px);
+    }
+  }
+  .audio {
+    width: 50vw;
+    height: 100%;
+    background: #31383e;
+    position: absolute;
+    top: 4rem;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background: #31383e;
+      z-index: -1;
+      box-shadow: 0 0 0.35rem rgba($black-color, 0.15);
+    }
+    &__box {
+      width: 24px;
+      height: 24px;
+      .btn {
+        font-size: 1rem;
+      }
+    }
+    .btn {
+      width: 24px;
+      height: 24px;
+      @include flex(center, center);
+    }
+    &__volume {
+      display: none;
+    }
+  }
+}

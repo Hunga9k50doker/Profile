@@ -2,6 +2,44 @@
   position: relative;
   @include flex(center, center);
   min-width: 300px;
+  z-index: 1;
+  &__mobile {
+    position: relative;
+
+    font-size: 1.6rem;
+    color: $white-color;
+    width: 50px;
+    height: 50px;
+    @include flex(center, center);
+    .bx-aperture {
+      transform: rotate(0);
+
+      &:hover {
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+      }
+    }
+    .audio {
+      transform: translateX(-200%);
+      transition: transform 0.5s ease;
+      &__progress {
+        top: 0;
+        width: 100vw;
+      }
+    }
+  }
+  &__mobile:not(.active) {
+    .audio {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
+  }
+  &__mobile.active {
+    .audio {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   &__title {
     position: absolute;
     margin: 10px 0;

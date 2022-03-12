@@ -38,7 +38,7 @@ const arrProj = [
     otherDesc: "Nothing!!!",
   },
   {
-    title: "Setsail",
+    title: "Diamond",
     img: project_2_img_01,
     thumb: [
       project_2_img_01,
@@ -49,14 +49,13 @@ const arrProj = [
     ],
     path: "/",
 
-    desc: "Dolore ipsum amet sanctus est dolores nonumy aliquyam et ipsum, sed gubergren labore dolore et sed diam at clita, ipsum.",
-    frontend: "HTML, CSS, JS, ReactJs",
-    backend: "Coming soon",
-    otherDesc:
-      "Kasd kasd amet lorem justo justo dolore elitr. Sanctus sit sadipscing nonumy rebum dolores ea ipsum lorem elitr. Accusam amet.",
+    desc: "This project is under development.",
+    frontend: "Update soon.",
+    backend: "Coming soon.",
+    otherDesc: "Nothing!!!",
   },
   {
-    title: "Setsail",
+    title: "Diamond",
     img: project_3_img_01,
     thumb: [
       project_3_img_01,
@@ -65,33 +64,30 @@ const arrProj = [
       project_3_img_04,
     ],
     path: "/",
-    desc: "Dolore ipsum amet sanctus est dolores nonumy aliquyam et ipsum, sed gubergren labore dolore et sed diam at clita, ipsum.",
-    frontend: "HTML, CSS, JS, ReactJs",
-    backend: "Coming soon",
-    otherDesc:
-      "Kasd kasd amet lorem justo justo dolore elitr. Sanctus sit sadipscing nonumy rebum dolores ea ipsum lorem elitr. Accusam amet.",
+    desc: "This project is under development.",
+    frontend: "Update soon.",
+    backend: "Update soon..",
+    otherDesc: "Nothing!.!!",
   },
   {
-    title: "Setsail",
+    title: "Diamond",
     img: project_4_img_01,
     thumb: [project_4_img_01, project_4_img_02, project_4_img_03],
     path: "/",
-    desc: "Dolore ipsum amet sanctus est dolores nonumy aliquyam et ipsum, sed gubergren labore dolore et sed diam at clita, ipsum.",
-    frontend: "HTML, CSS, JS, ReactJs",
-    backend: "Coming soon",
-    otherDesc:
-      "Kasd kasd amet lorem justo justo dolore elitr. Sanctus sit sadipscing nonumy rebum dolores ea ipsum lorem elitr. Accusam amet.",
+    desc: "This project is under development.",
+    frontend: "Update soon.",
+    backend: "Update soon..",
+    otherDesc: "Nothing!.!!",
   },
   {
-    title: "Setsail",
+    title: "Diamond",
     img: project_5_img_01,
     thumb: [project_5_img_01, project_5_img_02, project_5_img_03],
     path: "/",
-    desc: "Dolore ipsum amet sanctus est dolores nonumy aliquyam et ipsum, sed gubergren labore dolore et sed diam at clita, ipsum.",
-    frontend: "HTML, CSS, JS, ReactJs",
-    backend: "Coming soon",
-    otherDesc:
-      "Kasd kasd amet lorem justo justo dolore elitr. Sanctus sit sadipscing nonumy rebum dolores ea ipsum lorem elitr. Accusam amet.",
+    desc: "This project is under development.",
+    frontend: "Update soon.",
+    backend: "Update soon..",
+    otherDesc: "Nothing!.!!",
   },
 ];
 

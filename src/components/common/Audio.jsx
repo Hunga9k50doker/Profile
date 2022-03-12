@@ -7,11 +7,14 @@ const Audio = () => {
   const [repeat, setRepeat] = useState(false);
   const [volume, setVolume] = useState(50);
   const [mute, setMute] = useState(false);
+  
+
   const refAudio = useRef(null);
   const btnNext = useRef(null);
   const refRepeat = useRef(null);
   const refVolumeIcon = useRef(null);
   const refProgress = useRef(null);
+
   useEffect(() => {
     setAudio(5);
     setActive();
