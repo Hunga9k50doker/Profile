@@ -5,6 +5,8 @@ import {
   music_04,
   music_05,
   music_06,
+  music_07,
+  music_08,
 } from "../audio";
 
 const arrAudio = [
@@ -31,6 +33,14 @@ const arrAudio = [
   {
     title: "BeatBrothers - Fight",
     audio: music_06,
+  },
+  {
+    title: "Mashup slow beat",
+    audio: music_07,
+  },
+  {
+    title: "Something Just Like This",
+    audio: music_08,
   },
 ];
 

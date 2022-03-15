@@ -14,8 +14,9 @@ const Audio = () => {
   const refVolumeIcon = useRef(null);
   const refProgress = useRef(null);
 
+  // console.log(refAudio.current);
   useEffect(() => {
-    setAudio(5);
+    setAudio(6);
     setActive();
   }, []);
   useEffect(() => {
@@ -72,7 +73,7 @@ const Audio = () => {
       };
     },
   };
-
+  // arrAudio.map((e) => console.log(e));
   return (
     <div className="audio">
       {arrAudio.map(
