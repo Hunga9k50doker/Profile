@@ -6,16 +6,16 @@ import {
   music_05,
   music_06,
   music_07,
-  music_08,
+  // music_08,
 } from "../audio";
 
 const arrAudio = [
   {
-    title: "Thrift Shop",
+    title: "In The Name Of Love",
     audio: music_01,
   },
   {
-    title: "Chỉ Muốn Bên Em",
+    title: "Gayley",
     audio: music_02,
   },
   {
@@ -26,21 +26,18 @@ const arrAudio = [
     title: "Rather Be",
     audio: music_04,
   },
+
   {
-    title: "Walk On Water",
+    title: "BeatBrothers - Fight",
     audio: music_05,
   },
   {
-    title: "BeatBrothers - Fight",
+    title: "Mashup slow beat",
     audio: music_06,
   },
   {
-    title: "Mashup slow beat",
-    audio: music_07,
-  },
-  {
     title: "Something Just Like This",
-    audio: music_08,
+    audio: music_07,
   },
 ];
 
