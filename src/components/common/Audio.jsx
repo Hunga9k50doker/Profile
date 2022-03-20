@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import arrAudio from "../../assets/data/audio";
 
 const Audio = () => {
-  const [audio, setAudio] = useState(6);
+  const [audio, setAudio] = useState(arrAudio.lenght -1);
   const [active, setActive] = useState(false);
   const [repeat, setRepeat] = useState(false);
   const [volume, setVolume] = useState(50);
@@ -16,7 +16,7 @@ const Audio = () => {
 
   // console.log(refAudio.current);
   useEffect(() => {
-    setAudio(6);
+    setAudio(arrAudio.lenght -1);
     setActive();
   }, []);
   useEffect(() => {
