@@ -5,6 +5,7 @@
   overflow-x: auto;
   transform-style: preserve-3d;
   color: $white-color;
+  overflow: hidden;
 
   .main__container {
     &::after,

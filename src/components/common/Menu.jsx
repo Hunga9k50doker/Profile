@@ -4,13 +4,13 @@ export default function Menu({ active, setActive }) {
   const location = useLocation();
   React.useEffect(() => {
     setActive(false);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
   return (
     <div className={`menu ${active ? "active" : ""}`}>
       <ul className="menu__list">
         {/* <li className="menu__item ">
-          <i class="bx bx-search-alt-2"></i>
+          <i className="bx bx-search-alt-2"></i>
           <input
             type="text"
             name="search"

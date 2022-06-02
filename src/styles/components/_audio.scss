@@ -3,9 +3,23 @@
   @include flex(center, center);
   min-width: 300px;
   z-index: 1;
+  transform: translateY(-200%);
+  transition: all 0.3s ease;
+  .audio__chervon {
+    cursor: pointer;
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%, 20px) rotate(0);
+    z-index: 99;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $primary-color;
+    }
+  }
   &__mobile {
     position: relative;
-
     font-size: 1.6rem;
     color: $white-color;
     width: 50px;
@@ -28,6 +42,7 @@
       }
     }
   }
+
   &__mobile:not(.active) {
     .audio {
       transform: translateX(-200%);
@@ -100,11 +115,10 @@
   &__progress {
     cursor: pointer;
     position: fixed;
-    right: 0;
-    left: 0;
     top: 5rem;
     height: 2px;
     padding: 0;
+    width: 100vw !important;
     transition: opacity 0.2s;
     overflow: hidden;
   }
@@ -143,12 +157,7 @@
       -webkit-animation: audio 1s infinite;
       animation: audio 1s infinite;
       z-index: 3;
-      background-image: linear-gradient(
-        109.6deg,
-        rgba(247, 253, 166, 1) 11.2%,
-        rgba(128, 255, 221, 1) 57.8%,
-        rgba(255, 128, 249, 1) 85.9%
-      );
+      background: $clr-neon;
     }
     .btn__audio {
       position: relative;
@@ -189,6 +198,13 @@
   }
 }
 
+.audio.active {
+  // overflow: visible;
+  transform: translateY(0);
+  .audio__chervon {
+    transform: translate(-50%, 20px) rotate(180deg);
+  }
+}
 @-webkit-keyframes audio {
   from {
     transform: rotate(0);

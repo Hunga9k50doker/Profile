@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 const ThumbImg = ({ arr, setImg, index }) => {
-  const [thumb, setThumb] = useState(0);
+  // const [thumb, setThumb] = useState(0);
   return (
     <div className="thumb">
       {arr.map((e, id) => (
@@ -10,7 +10,7 @@ const ThumbImg = ({ arr, setImg, index }) => {
           src={e}
           alt="Not found"
           className={index === id ? "active" : ""}
-          onClick={() => setImg(id)}
+          // onClick={() => setImg(id)}
         />
       ))}
     </div>
@@ -18,8 +18,14 @@ const ThumbImg = ({ arr, setImg, index }) => {
 };
 export default function BoxItem(props) {
   const [active, setActive] = useState(false);
+  // const itemRef = useRef(null);
+  // if (itemRef.current)
+  //   itemRef.current.addEventListener("mousedown", () => {
+  //     // console.log(itemRef);
+  //     console.log(itemRef.current);
+  //   });
   return (
-    <div className={`box ${props.className}`}>
+    <div  className={`box ${props.className}`}>
       <div className={`box__overlay   ${active ? "active" : ""}`}>
         <h3 className="box__overlay__desc">
           Description:
@@ -36,9 +42,8 @@ export default function BoxItem(props) {
           <Button content="Close" classNameBtn="btn__close" />
         </div>
       </div>
-      <div className="box__header">{
-        props.idThumb
-      }
+      <div className="box__header">
+        {props.idThumb}
         <img src={props.img} alt={props.title} />
       </div>
       <ThumbImg arr={props.thumb} setImg={props.thumb[0]} index={0} />

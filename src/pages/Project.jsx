@@ -1,18 +1,20 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState} from "react";
 import BoxItem from "../components/common/BoxItem";
 import arrProj from "../assets/data/Project";
 
 export default function Project() {
   const [index, setindex] = useState(0);
-  const onClick = useCallback(
-    () => setindex((state) => (state + 1) % arrProj.length),
-    []
-  );
+
+  // const onClick = useCallback(() => {
+  //   setindex((state) => (state + 1) % arrProj.length);
+
+  // }, []);
   document.title = "NH-Product";
-  useEffect(() => {
-    const id = setInterval(onClick, 5000);
-    return () => clearInterval(id);
-  }, [onClick]);
+  // useEffect(() => {
+  //   const id = setInterval(onClick, 5000);
+  //   return () => clearInterval(id);
+  // }, [onClick]);
+
   const next = () => {
     if (index === arrProj.length - 1) {
       setindex(0);

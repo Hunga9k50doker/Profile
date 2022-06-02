@@ -12,7 +12,7 @@ export default function Header({ active, setActive }) {
     return () => {
       window
         .matchMedia("(min-width: 576px)")
-        .addEventListener("change", (e) => setMatch(e.matches));
+        .addEventListener("onresize", (e) => setMatch(e.matches));
     };
   }, []);
 
@@ -22,6 +22,7 @@ export default function Header({ active, setActive }) {
         <Link to="/">NH</Link>
       </h1>
       {match ? (
+        
         <Audio />
       ) : (
         <div className={`audio__mobile ${isAudio ? "active" : ""}`}>

@@ -2,9 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import arrAudio from "../../assets/data/audio";
 
 const Audio = () => {
-  const [audio, setAudio] = useState(7);
+  const [audio, setAudio] = useState(arrAudio.length - 1);
   const [active, setActive] = useState(false);
   const [repeat, setRepeat] = useState(false);
+  const [showAudio, setShowAudio] = useState(false)
   const [volume, setVolume] = useState(50);
   const [mute, setMute] = useState(false);
 
@@ -13,10 +14,9 @@ const Audio = () => {
   const refRepeat = useRef(null);
   const refVolumeIcon = useRef(null);
   const refProgress = useRef(null);
-
   // console.log(refAudio.current);
   useEffect(() => {
-    setAudio(7);
+    setAudio(arrAudio.length - 1);
     setActive();
   }, []);
   useEffect(() => {
@@ -72,10 +72,17 @@ const Audio = () => {
         console.log(seekTime);
       };
     },
+    showAudio() {
+
+    }
   };
   // arrAudio.map((e) => console.log(e));
   return (
-    <div className="audio">
+    <div className={`audio ${showAudio ? "active" : ""}`}>
+      <i
+        onClick={() => setShowAudio(!showAudio)}
+        className="bx bx-chevrons-down bx-flashing audio__chervon"
+      ></i>
       {arrAudio.map(
         (e, id) =>
           audio === id && (

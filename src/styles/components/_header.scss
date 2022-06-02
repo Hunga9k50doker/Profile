@@ -7,7 +7,6 @@
   height: 5rem;
   @include flex(center, space-around);
   background: #31383e;
-
   &__menu {
     position: relative;
     cursor: pointer;
