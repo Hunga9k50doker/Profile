@@ -5,7 +5,7 @@ const Audio = () => {
   const [audio, setAudio] = useState(arrAudio.length - 1);
   const [active, setActive] = useState(false);
   const [repeat, setRepeat] = useState(false);
-  const [showAudio, setShowAudio] = useState(false)
+  const [showAudio, setShowAudio] = useState(false);
   const [volume, setVolume] = useState(50);
   const [mute, setMute] = useState(false);
 
@@ -72,9 +72,7 @@ const Audio = () => {
         console.log(seekTime);
       };
     },
-    showAudio() {
-
-    }
+    showAudio() {},
   };
   // arrAudio.map((e) => console.log(e));
   return (
