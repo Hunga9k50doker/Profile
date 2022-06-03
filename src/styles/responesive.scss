@@ -104,6 +104,28 @@ input[type="range"]::-ms-fill-upper {
       transform: translate(50%, 20px);
     }
   }
+  .project {
+    .box {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      .btn__primary {
+        width: 50px;
+        height: 20px;
+        span {
+          font-size: 10px;
+        }
+      }
+      .btn__second {
+        &:after {
+          height: 1px;
+        }
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
   .audio {
     width: 50vw;
     height: 100%;
@@ -127,6 +149,7 @@ input[type="range"]::-ms-fill-upper {
         font-size: 1rem;
       }
     }
+
     .btn {
       width: 24px;
       height: 24px;
