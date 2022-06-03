@@ -47,7 +47,7 @@ const arrProj = [
       project_2_img_04,
       project_2_img_05,
     ],
-    path: "https://frontend-jewel-shop.vercel.app/",
+    path: "https://delicate-llama-f9bfad.netlify.app/",
     desc: "This is a website that sells jewelry. Features like login, register, adding, editing, deleting, searching, add review, filter, order management, invoice details ...",
     frontend: "HTML , JSX , JS, CSS(SCSS), ReactJs ",
     backend: "Nodejs-ExpressJs, MongoDB",
