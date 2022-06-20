@@ -1,4 +1,26 @@
-
 .component {
   min-height: 100vh;
+  .form__send__email {
+    width: 100vw;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+
+      input,
+      textarea {
+        margin: 4px;
+        padding: 0 8px;
+        outline: none;
+      }
+      .submit {
+        &:hover {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
 }
