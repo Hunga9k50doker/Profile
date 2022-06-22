@@ -6,11 +6,6 @@ export default function Contact() {
 
   const arrContact = [
     {
-      icon: "bx bxl-facebook",
-      content: "Facebook",
-      path: " https://www.facebook.com/nguyenhung2310/",
-    },
-    {
       icon: "bx bxl-github",
       content: "Github",
       path: " https://github.com/Hunga9k50doker",

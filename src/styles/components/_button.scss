@@ -18,6 +18,7 @@
   position: absolute;
   padding: unset;
   top: 50%;
+  background: $white-color;
   transform: translate(0, -50%);
   transition: all 0.3s ease-in-out;
   opacity: 0.5;
@@ -95,7 +96,7 @@
 
 .btn__primary {
   overflow: hidden;
-
+  background: $white-color;
   position: relative;
   border-radius: 0;
   padding: 15px 30px;

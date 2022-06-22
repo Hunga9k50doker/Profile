@@ -14,7 +14,6 @@ const Audio = () => {
   const refRepeat = useRef(null);
   const refVolumeIcon = useRef(null);
   const refProgress = useRef(null);
-  // console.log(refAudio.current);
   useEffect(() => {
     setAudio(arrAudio.length - 1);
     setActive();
@@ -69,12 +68,10 @@ const Audio = () => {
       refProgress.current.oninput = (e) => {
         const seekTime = (refAudio.current.duration / 100) * e.target.value;
         refAudio.current.currentTime = seekTime;
-        console.log(seekTime);
       };
     },
     showAudio() {},
   };
-  // arrAudio.map((e) => console.log(e));
   return (
     <div className={`audio ${showAudio ? "active" : ""}`}>
       <i
