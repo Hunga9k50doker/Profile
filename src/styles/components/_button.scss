@@ -25,6 +25,7 @@
   &:hover {
     color: $primary-color;
     opacity: 1;
+    background: $white-color;
   }
 }
 .btn__next {
@@ -128,6 +129,8 @@
   }
   &:hover {
     color: $black-color;
+    background: $white-color;
+
     span {
       letter-spacing: 3px;
     }
