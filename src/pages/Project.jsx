@@ -4,17 +4,7 @@ import arrProj from "../assets/data/Project";
 
 export default function Project() {
   const [index, setindex] = useState(0);
-
-  // const onClick = useCallback(() => {
-  //   setindex((state) => (state + 1) % arrProj.length);
-
-  // }, []);
   document.title = "NH-Product";
-  // useEffect(() => {
-  //   const id = setInterval(onClick, 5000);
-  //   return () => clearInterval(id);
-  // }, [onClick]);
-
   const next = () => {
     if (index === arrProj.length - 1) {
       setindex(0);
@@ -29,7 +19,6 @@ export default function Project() {
       setindex(index - 1);
     }
   };
-  // arrProj.map((e) => console.log(e));
   return (
     <div className="project">
       <ul className="project__list">
