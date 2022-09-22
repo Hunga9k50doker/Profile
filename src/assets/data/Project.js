@@ -7,18 +7,27 @@ import {
   project_2_img_01,
   project_2_img_02,
   project_2_img_03,
+  project_4_img_01,
+  project_4_img_02,
+  project_4_img_03,
 } from "../img";
 
 const arrProj = [
   {
+    title: "Price Guide",
+    img: project_4_img_01,
+    thumb: [project_4_img_01, project_4_img_02, project_4_img_03],
+    path: "https://www.priceguide.cards/",
+    desc: "Collection pricing website",
+    frontend: "NextJs, TypeScript, SASS,...",
+    backend: "Python, Docker, Firebase,...",
+    otherDesc:
+      "This is the company's project, I joined the project when it completed phase 1, my task is to support development, upgrade to phase 2!!!",
+  },
+  {
     title: "Setsail",
     img: project_1_img_01,
-    thumb: [
-      project_1_img_02,
-      project_1_img_03,
-      project_1_img_04,
-      project_1_img_05,
-    ],
+    thumb: [project_1_img_02, project_1_img_03, project_1_img_04, project_1_img_05],
     path: "https://setail.vercel.app/",
     desc: "This travel website is my first product, taking UI ideas from an existing teamplate and I developed it on the React JS library platform. There is currently no Backend section. You can check out the website using the link below. Thanks!",
     frontend: "HTML, CSS, JS, ReactJs",

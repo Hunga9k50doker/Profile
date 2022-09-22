@@ -16,9 +16,9 @@ import project_2_img_05 from "./images/project_02/p2_04.png";
 // import project_3_img_04 from "./images/project_03/p3_03.png";
 // import project_3_img_05 from "./images/project_02/p3_04.png";
 
-import project_4_img_01 from "./images/project_04/demo_s5.png";
-import project_4_img_02 from "./images/project_04/p4_01.png";
-import project_4_img_03 from "./images/project_04/p4_02.png";
+import project_4_img_01 from "./images/project_04/prj_3_2.jpg";
+import project_4_img_02 from "./images/project_04/prj_3_3.png";
+import project_4_img_03 from "./images/project_04/prj_3_1.jpg";
 // import project_4_img_04 from "./images/project_04/p2_03.png";
 // import project_4_img_05 from "./images/project_04/p2_04.png";
 
