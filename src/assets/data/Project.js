@@ -10,9 +10,24 @@ import {
   project_4_img_01,
   project_4_img_02,
   project_4_img_03,
+  project_6_img_01,
+  project_6_img_02,
+  project_6_img_03,
+  project_6_img_04,
+  project_6_img_05,
 } from "../img";
 
 const arrProj = [
+  {
+    title: "Cimigo",
+    img: project_6_img_01,
+    thumb: [project_6_img_02, project_6_img_03, project_6_img_04, project_6_img_05],
+    path: "https://rapidsurvey.cimigo.com/project",
+    desc: "Market Survey website",
+    frontend: "ReactJs, TypeScript,Redux, SASS, MUI,...",
+    backend: "Nodejs, Mysql,...",
+    otherDesc: "I joined the project as a web Front-end role. My mission is to customize, upgrade, and optimize the website",
+  },
   {
     title: "Price Guide",
     img: project_4_img_01,
