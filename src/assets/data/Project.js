@@ -37,7 +37,7 @@ const arrProj = [
     frontend: "NextJs, TypeScript, SASS,...",
     backend: "Python, Docker, Firebase,...",
     otherDesc:
-      "This is the company's project, I joined the project when it completed phase 1, my task is to support development, upgrade to phase 2!!!",
+      "Nothing!!!",
   },
   {
     title: "Setsail",
