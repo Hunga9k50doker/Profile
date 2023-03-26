@@ -16,8 +16,7 @@ export default function Home() {
           <div className="col l-9 m-6 c-12">
             <h2 className="home__title"> Hi, I am Hung.</h2>
             <div className="home__desc">
-              <br /> I am currently in my third year at UIT (University
-              Information Teachnology). <br />
+              <br /> I'm a Front-end developer. <br />
               This is my personal introduction site. It's still not 100%
               complete and I'm trying to perfect it every day. All my
               information is here. If you want to know more about me can contact
